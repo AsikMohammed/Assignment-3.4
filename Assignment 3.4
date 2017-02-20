@@ -4,5 +4,5 @@ IMPORTANCE OF NAMENODE
       3.) The Name Node points Clients to the Data Nodes they need to talk to and keeps track of the cluster’s storage capacity, the health of each Data Node, and making sure each block of data is meeting the minimum defined replica policy.
       4.) The Name Node is a critical component of the Hadoop Distributed File System (HDFS). 
       5.) Without it, Clients would not be able to write or read files from HDFS, and it would be impossible to schedule and execute Map Reduce jobs. 
-
-  
+      6.) It does not store the actual data or the dataset. The data itself is actually stored in the DataNodes.
+      7.) It is usually configured with a lot of memory (RAM). Because the block locations are help in main memory.
