@@ -1,8 +1,8 @@
 IMPORTANCE OF NAMENODE
-  * NameNode is the centerpiece of  HDFS.
-  * NameNode is also known as the Master
-  * NameNode only stores the metadata of HDFS – the directory tree of all files in the file system, and tracks the files across the cluster.
-  * NameNode is the centerpiece of an HDFS file system. 
-  * NameNode is a Single Point of Failure for the HDFS Cluster.
-  * NameNode is usually configured with a lot of memory (RAM). Because the block locations are help in main memory.
-  * NameNode oversees the health of DataNode and coordinates access to the data stored in DataNode.
+      1.) The Name Node holds all the file system metadata for the cluster and oversees the health of Data Nodes and coordinates access to data. The Name Node is the central controller of HDFS. It does not hold any cluster data itself. 
+      2.) The Name Node only knows what blocks make up a file and where those blocks are located in the cluster.
+      3.) The Name Node points Clients to the Data Nodes they need to talk to and keeps track of the cluster’s storage capacity, the health of each Data Node, and making sure each block of data is meeting the minimum defined replica policy.
+      4.) The Name Node is a critical component of the Hadoop Distributed File System (HDFS). 
+      5.) Without it, Clients would not be able to write or read files from HDFS, and it would be impossible to schedule and execute Map Reduce jobs. 
+
+  
